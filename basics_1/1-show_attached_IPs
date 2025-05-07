@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display all active ip V4 addresses
+ifconfig | grep -E 'inet ' | awk '{print $2}' | sed 's/addr://g'
